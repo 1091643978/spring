@@ -10,6 +10,8 @@ public class BeanFactoryTest {
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
         reader.loadBeanDefinitions("spring-bean.xml");
         IocService iocService = beanFactory.getBean("iocService", IocService.class);
+
+        iocService.hi();
     }
 
 }
